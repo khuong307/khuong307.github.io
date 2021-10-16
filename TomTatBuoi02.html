@@ -1,0 +1,286 @@
+<!DOCTYPE html> <!-- Khai báo HTML5, DOCTYPE không phân biệt hoa/thường, đúng chinh tả là được-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--Thẻ meta giao tiếp thông tin với trình duyệt,utf-8 -> hiển thị unicode-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tóm Tắt Buổi 02</title> <!--Hiện tên của trang web-->
+</head>
+<!--Trình duyệt sẽ thực thi các thẻ từ xuống dưới-->
+<!--html -> head -> meta -> title -> body-->
+<body>
+    <h1 id = "header" style="font-family: 'Times New Roman', Times, serif; text-align: center; color: #a30309;">BÀI 02: NGÔN NGỮ HTML</h1>
+    <div style = "font-size: 1.36vw;"> <!-- điều chỉnh cỡ chữ -->
+        <ul>
+            <li style="color: #02084f;"><b> Mục tiêu: </b></li>
+                <ul>
+                    <li> Công cụ hỗ trợ xây dựng, xử lý ngôn ngữ HTML. </li>
+                    <li> Tìm hiểu các khái niệm cơ bản về ngôn ngữ HTML (lịch sử, ứng dụng, cách cài đặt, …) </li>
+                    <li> Tại sao phải quan tâm về lịch sử phát triển của HTML? </li>
+                    <li> Các cú pháp, các loại thẻ (tag) được sử dụng trong HTML</li>
+                </ul>
+            <br>
+
+            <li style="color: #02084f;"><b>Các công cụ (tools) dùng để hỗ trợ việc code ngôn ngữ HTML: </b></li>
+                <div>  IDE:
+                    <ul>
+                        <li> <a href = "https://www.sublimetext.com/3" target=”_blank” title = "Sublime Text Download"> Sublime Text </a></li>
+                        <li> <a href = "https://code.visualstudio.com/download" target=”_blank” title = "VS Code Download"> Visual Studio Code</a></li>
+                    </ul>
+                </div>
+                <br>
+                <div>  Browser (trình duyệt): 
+                    <ul>
+                        <li> <a href = "https://shorturl.at/bdwyT" target=”_blank” title = "Google Chrome Download"> Google Chrome (Google) </a></li>
+                        <li> <a href = "https://www.microsoft.com/vi-vn/edge" target=”_blank” title = "Microsoft Edge Download"> Microsoft Edge (Microsoft)</a></li>
+                        <li> <a href = "https://www.mozilla.org/vi/firefox/new/" target=”_blank” title = "Fire Fox Download"> Fire Fox (Mozilla)</a></li>
+                    </ul>
+                </div>
+            <br>
+
+            <li style="color: #02084f;"><b>Sơ lược về HTML:</b></li>
+                <p> HTML (Hyper Text Markup Language):  &rarr; Tạo ra nội dung của 1 trang web.</p>
+                <p> Cách thức hoạt động: Người dùng đưa vào URL &rarr; trình duyệt gửi thông điệp HTTPS cho web server (get/post) 
+                    &rarr; sau khi nhận sẽ tạo ra 1 file HTML trả về cho trình duyệt
+                    &rarr; nhiệm vụ trình duyệt là nhận file HTML đó và biểu diễn nội dung cho người dùng.</p>
+                <p> Công nghệ ảnh hưởng đến ứng dụng Web:</p>
+                <ul>
+                    <li> <b>HTML:</b> đánh dấu văn bản  &rarr; cấu trúc tài liệu.</li>
+                    <li> <b>CSS:</b> để các trình duyệt thể hiện theo thể thống nhất.</li>
+                    <li> <b>JavaScript:</b> xử lý hành động của người dùng, triển khai các chức năng của ứng dụng web.</li>
+                </ul>
+            <br>
+
+            <li style="color: hsl(235, 95%, 16%);"><b>Element, Tag, Attributes: </b></li>
+                <p> <b><u>Element:</u></b> 
+                    Là phương thức xác định nội dung, cấu trúc của các đối tượng trong một website, Element được bao bọc bởi ký hiệu &lt; >.
+                    <div>
+                        <ul>
+                            <b>&nbsp; Ví dụ:</b>
+                            <li> <b>&lt;p>:</b> p là viết tắt của "paragraph" dùng để biễu diễn đoạn văn bản.</li>
+                            <li> <b>&lt;div>:</b> div là viết tắt của "division" dùng để chia tài liệu thành những khối nhỏ riêng biệt.</li>
+                        </ul>
+                    </div>
+                </p>
+                
+                <p> <b><u>Tag:</u></b> 
+                    Element được bao bọc bởi &lt; >  được gọi là các thẻ (tag). Đối với các loại tag đều bắt buộc phải có thẻ mở, không nhất thiết phải có thẻ đóng.
+                    <div>
+                        <ul>
+                            <b>&nbsp; Ví dụ:</b>
+                            <li> <b>&lt;p> &lt;/p>:</b> là loại thẻ buộc phải có thẻ mở và thẻ đóng.</li>
+                            <li> <b>&lt;br>, &lt;hr>:</b> là 2 thẻ không cần phải có thẻ đóng.</li>
+                            Xem tất cả các thẻ(tag) có trong HTML <a href = "https://www.w3schools.com/tags/default.asp" target=”_blank” title = " All tags in W3School">tại đây.</a>
+                        </ul>
+                        
+                    </div>
+                </p>
+
+                <p> <b><u>Attributes:</u></b> 
+                    sử dụng để cung cấp thông tin bổ sung về một Element &rarr; tăng tính linh hoạt cho một Element.
+                    <div>
+                        <ul>
+                            <b>&nbsp; Ví dụ:</b>
+                            <li> <b>href:</b> dùng để gán đường dẫn tới một trang web khác, là phương pháp sử dụng để gán link cho phần Browser ở phía trên.</li>
+                            <li> <b>id:</b> có thể dùng để định danh 1 vị trí nào đó trong tài liệu html, <a href = "#header" title = "Quay lại Header">nhấn vào đây để quay lại Header.</a></li>
+                            <li> <b>class:</b> có thể dùng để định danh 1 loại thẻ nào đó, sử dụng phổ biến khi kết hợp với CSS.</li>
+                            <li> <b>src:</b> viết tắt của "source" có thể truy xuất dữ liệu từ đường dẫn (hình ảnh, video, ...).</li>
+                        </ul>
+                    </div>
+                </p>
+
+                <p> <b><u>Nháy đơn vs Nháy kép:</u></b> 
+                    <ul>
+                        <p>Nháy kép: được sử dụng để bao quanh nội dung một thuộc tính.</p>
+                        <ul>
+                            <b>&nbsp; Ví dụ:</b>
+                            <br>
+                                <img src="nhay_kep_ex.png">
+                        </ul>
+                    </ul>
+
+                    <ul>
+                        <p>Nháy đơn: được sử dụng bên trong nháy kép khi muốn biễn diễn một chuỗi.</p>
+                        <ul>
+                            <b>&nbsp; Ví dụ:</b>
+                            <br>
+                                <img src="nhay_don_ex.png">
+                        </ul>
+                    </ul>
+                </p>
+
+            
+            <li style="color: hsl(235, 95%, 16%);"><b>Một số lưu ý về cú pháp: </b></li>
+            <p>
+                <ul>
+                    <li> Khi mở thẻ nên đóng thẻ liền theo sau, điều này hiện nay các IDE có hỗ trợ (các Extension có trong VS Code, .. )</li>
+                    <li> Chú thích: <b>&lt;!-- nội dung chú thích --> </b> có thể xem thông qua "View page source".</li>
+                    <li> Thẻ đóng: ký hiệu "/" nằm trước tên thẻ. (&lt;/p>)</li>
+                    <li> Khi sử dụng nhiều hơn 1 thẻ thì thẻ nào mở trước sẽ đóng sau cùng.</li>
+                    <ul>
+                        <b>Ví dụ:</b> &lt;<b>li></b> &lt;<b>a</b> href = "https://www.sublimetext.com/3" target=”_blank”> Sublime Text &lt;/<b>a</b>>&lt;/<b>li</b>>
+                    </ul>
+                </ul>
+            </p>
+
+            <li style="color: hsl(235, 95%, 16%);"><b>W3C vs WHATWG: </b></li>
+            <p>
+                <b>W3C:</b> HTML đã trở thành một chuẩn Internet được tổ chức W3C (World Wide Web Consortium) vận hành và phát triển. 
+                        Có thể tự tìm kiếm tình trạng mới nhất của HTML tại bất kỳ thời điểm nào trên Website của W3C. W3C là tổ chức đưa ra chuẩn mà ở đó các nhà thiết kế website sử dụng làm thước đo khi thiết kế website.
+                
+            </p>
+
+            <p>
+                <b>WHATWG:</b> một cộng đồng của những người quan tâm đến việc phát triển HTML, nhà cung cấp trình duyệt Web hàng đầu. Thành lập năm 2004.
+            </p>
+
+
+            <p>Như ta đã biết thì người dùng khi truy cập vào một website họ phải sử dụng trình duyệt, từ đó dẫn tới việc thiết kế một website nên nghiêng về phía trình duyệt hay nghiêng về các tiêu chuẩn được đặt ra trước đó, bởi mỗi trình duyệt được thiết kế bởi các tổ chức khác nhau.</p>
+            <p> Năm 2007, W3C và WHATWG bắt tay hợp tác để tìm ra tiếng nói chung, tới năm 2011 đề ra chuẩn HTML5 (đối với WHATWG chỉ là HTML).</p>
+            <p>&rarr; Ta cần tìm hiểu về lịch sử của HTML với mục đích thiết kế ra một website mà có thể chạy tốt trên tất cả các trình duyệt &rarr; muốn đạt được điều đó phải thiết kế dựa trên chuẩn đã được đề ra.
+            (Có thể đánh giá trang html đã đạt chuẩn hay chưa có thể truy cậy <a href = "https://validator.w3.org/#validate_by_upload" title = "Validator HTML">tại đây</a>)
+            </p>
+
+            <li style="color: hsl(235, 95%, 16%);"><b>Cấu trúc cơ bản của một file HTML: </b></li>
+            <p>
+                <ul>
+                    <img src="html_coban.png">
+                </ul>
+            </p>
+
+            <li style="color: hsl(235, 95%, 16%);"><b>Các ký tự đặc biệt: </b></li>
+            <p>Khi văn bản trong HTML (text) chứ các ký tự như "&lt;" , "&gt;", "&nbsp;", ..., ta cần phải thay thế bằng các ký tự khác để tránh việc đoạn văn bản không theo ý muốn.</p>
+            <p>Một số ký tự đặc biệt sau đây và cách biến đổi:</p>
+            <ul>
+                <img src="table_ex.png">
+                <p><b>Ví dụ:</b></p>
+                <p><img src="code_ex.png"></p>
+
+
+                <h4>Don't be afraid to be &lt;then a 100% success &amp; &gt;more: </h4>
+                <p>
+                    &quot;It is not the critic who counts; not the man who points out... 
+                    who neither know victory&nbsp;nor&nbsp;defeat.&quot;
+                </p>
+                <p>Theodor Roosevelt 1910 &copy; Copyright</p>
+            </ul>
+
+            <li style="color: hsl(235, 95%, 16%);"><b>&lt;div> vs &lt;span>: </b></li>
+            <p><b>span:</b> là một thẻ inline, không độc quyền 1 hàng cụ thể, chỉ bị tác động bới CSS.</p>
+            <ul>
+                <p> 
+                    <img src="span_ex.png">
+                    <br>
+                    &rarr;
+                    <span>Hôm nay</span>
+                    <span>trời mưa</span>
+                    <span>to.</span>
+                </p>
+                
+            </ul>
+
+            <p><b>div:</b> độc quyền 1 hàng cụ thể, chia tài liệu thành nhiều khối để dễ quản lý.</p>
+            <ul>
+                <p> 
+                    <img src="div_ex.png">
+                    <div>&nbsp; &nbsp; &nbsp; &nbsp; Hôm nay</div>
+                    <div>&rarr; &nbsp; &nbsp;trời mưa</div>
+                    <div>&nbsp; &nbsp; &nbsp; &nbsp; to.</div>
+                </p>
+            </ul>
+
+
+            <li style="color: hsl(235, 95%, 16%);"><b>Các thẻ header: </b></li>
+            <p>
+               Được đánh dấu từ h1 &rarr; h6, theo chiều hướng nhỏ dần với h1 là cỡ chữ lớn nhất. <br>
+               Ngoài ra cũng có thể điều chỉnh thông qua CSS hoặc các thuộc tính liên quan tới font (font-size, font-family, ...)
+            </p>
+
+            <li style="color: hsl(235, 95%, 16%);"><b>Lists: </b></li>
+            <p> Chia làm 2 dạng:</p>
+            <p>
+                <ul>
+                    <li><b>ul, il:</b> liệt kê nội dung không đánh số tứ tự &rarr; Unordered List (giống như trang html này).</li>
+                    <li><b>ol, il:</b> liệt kê nội dung có đánh số tứ tự bắt đầu từ 1 &rarr; Ordered List.</li>
+                </ul>
+            </p>
+            
+
+            
+                <li style="color: hsl(235, 95%, 16%);"><b>Đường dẫn ẩn: </b></li>
+                <p> Chia làm 2 dạng:</p>
+                <p>
+                    <ul>
+                        <li><b>a, href, title:</b> nếu chỉ gồm 3 thẻ này, khi nhấn đường dẫn sẽ thay đổi tại tab hiện tại &rarr; Internal Links.</li>
+                        <li><b>target = "_blank":</b> có thêm thuộc tính này, khi người dùng nhấn vào đường dẫn sẽ được chuyển sang tab mới &rarr; External Links.</li>
+                    </ul>
+                </p>
+
+            <li style="color: hsl(235, 95%, 16%);"><b>Chèn hình ảnh: </b></li>
+            <p>
+                <ul>
+                    <li><b>img: </b> cần sử dụng thẻ "image" &rarr; img</li>
+                    <li><b>src: </b> viết tắt của "source" có thể là đường dẫn của thư mục code, hoặc đường dẫn online tới tấm hình đó.</li>
+                    <li><b>width, height: </b> dùng để căn chỉnh chiều dài và chiều rộng của bức ảnh, ngoài ra có các thuộc tính như max_height, max_with, ..</li>
+                    &rarr; có thể dùng "View page source" để xem những hình ảnh đã chèn trước đó.
+                </ul>
+            </p>
+
+            <li style="color: hsl(235, 95%, 16%);"><b>Tạo bảng (table): </b></li>
+            <p>
+                <ul>
+                    <li>Cần sử dụng 4 thẻ table, tr, th, td.</li>
+                    <li><b>table:</b> khỏi tạo một đối tượng bảng.</li>
+                    <li><b>tr:</b> xác định một hàng trong bảng. </li>
+                    <li><b>th:</b> xác định một hàng đầu tiên (tiêu đề) của bảng </li>
+                    <li><b>td:</b> xác định một ô trong một hàng của bảng. </li>
+                    &rarr; có thể dùng rowspan hoặc colspan để hợp nhất các ô trong một bảng với nhau.
+
+                    <br><b>Ví dụ:</b>
+                    <table border = "1">
+                        <tr>
+                            <th>Họ và tên</th>
+                            <th>Năm sinh</th>
+                            <th>Giới tính</th>
+                        </tr>
+                        <tr>
+                            <td>Lê Hùng Trường Vũ</td>
+                            <td>2001</td>
+                            <td>Nam</td>
+                        </tr>
+                        <tr>
+                            <td>Nguyễn Thị Mai Trâm</td>
+                            <td>2001</td>
+                            <td>Nữ</td>
+                        </tr>
+                        <tr>
+                            <td>Nguyễn Thanh Nhàn</td>
+                            <td>2001</td>
+                            <td>Nữ</td>
+                        </tr>
+                        <tr>
+                            <td>Nguyễn An Hưng</td>
+                            <td>2001</td>
+                            <td>Nam</td>
+                        </tr>
+                    </table>
+                    &rarr; <b>"View page source"</b> để xem chi tiết.
+                </ul>
+                
+            </p>
+
+            <li style="color: hsl(235, 95%, 16%);"><b>Gửi dữ liệu bằng form: </b></li>
+            <p>Có 2 phương pháp phổ biến: (GET/POST)</p>
+            <p>Việc tạo các form đăng ký, nhập dữ liệu cần sử dụng thẻ form (gần đây thông thường có thể sử dụng boostrap để tăng tính thẩm mỹ), tạo form thì tất yếu phải nhập thông tin (dùng thẻ input), các thông tin được cung cấp có rất nhiều dạng, ví dụ:</p>
+            <ul>
+                <li><b>&lt;input type = "password">:</b> dùng cho việc nhập mạt khẩu, không hiển thị trực tiếp mật khẩu.</li>
+                <li><b>&lt;input type = "text">:</b> nhập dữ liệu văn bản (email, username, ..).</li>
+                <li><b>&lt;input type="radio">:</b> chọn 1 trong các sự lựa chọn</li>
+                <li><b>&lt;input type="checkbox">:</b> không chọn hoặc được chọn nhiều đáp án. </li>
+            </ul>
+        </ul>
+    </div>
+    <br>
+    <p><i>19127455-Nguyễn Vũ Duy Khương</i></p>
+</body>
+</html>
